@@ -9,4 +9,9 @@ title: About
 
 My name is Hjörtur
 <img src='../images/profile.jpg'>
+<style type="text/css">
+	img {
+		max-width: 300px;
+	}
+</style>
 Thanks for reading!
