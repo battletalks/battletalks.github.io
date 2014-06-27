@@ -8,7 +8,7 @@ title: About
 </p>
 
 My name is Hjörtur
-<img src='images/profile.jpg'>
+<img src='../images/profile.jpg'>
 <style type="text/css">
 	img {
 		max-width: 300px;
