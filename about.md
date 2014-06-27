@@ -8,5 +8,5 @@ title: About
 </p>
 
 My name is Hjörtur
-
+<img src='images/profile.jpg'>
 Thanks for reading!
