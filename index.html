@@ -17,7 +17,7 @@
         [my-line-height] == 20;
 
         h1 {
-            ::[line-height] == ::[font-size] * 3.25;
+            ::[line-height] == ::[font-size] * 1.25;
             ::[line-height] == [my-line-height] * 3;
         }
 
@@ -35,6 +35,7 @@
         p {
             ::[line-height] == ::[font-size] * 1.25;
             ::[line-height] == [my-line-height];
+            ::[line-width] ==  ::window[width]/2
         }
 
         #instructions p {
@@ -49,7 +50,7 @@
 
         #ingredients {
             display: block;
-            ::[width] == #instructions[width] / 1.2;
+            ::[width] == #instructions[width] / 2;
             ::[left] == [my-line-height] * 2;
             text-align: right;
         }
