@@ -1,139 +1,83 @@
-<!DOCTYPE html>
-<!-- saved from url=(0035)http://boxbase.org/gss-tests/pizza/ -->
-<html lang="en" class="gss-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <title></title>
+<!doctype html>
+<html>
 
-    <script>
-      GSS_CONFIG = {
-        worker: "worker.js"
-      }
-    </script>
-    <script src="gss.js"></script>
-    <script type="text/gss">
-        * { margin: 0; padding: 0;
-        }
+<head>
+  <title>unquote</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <script src="../components/platform/platform.js"></script>
+  <link rel="import" href="../components/font-roboto/roboto.html">
+  <link rel="import"
+    href="../components/core-header-panel/core-header-panel.html">
+  <link rel="import"
+    href="../components/core-toolbar/core-toolbar.html">
+  <link rel="import"
+    href="../components/core-animated-pages/core-animated-pages.html">
+  <link rel="import"
+    href="../components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="post-card.html">
+  <link rel="import" href="post-list.html">
+  <style>
+  html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+  @media (min-width: 481px) {
+    #tabs {
+      width: 200px;
+    }
+    .container {
+      width: 400px;
+    }
+  }
+  
+  core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  core-toolbar {
+    background: #03a9f4;
+    color: white;
+  }
+  #tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
-        [my-line-height] == 20;
-
-        h1 {
-            ::[line-height] == ::[font-size] * 1.25;
-            ::[line-height] == [my-line-height] * 3;
-        }
-
-        h2 {
-            ::[line-height] == ::[font-size] * 1.25;
-            ::[line-height] == [my-line-height] * 2;
-        }
-
-        h3 {
-            ::[line-height] == ::[font-size] * 1.25;
-            ::[line-height] == [my-line-height] * 1;
-            ::[margin-top]  == [my-line-height];
-        }
-
-        p {
-            ::[line-height] == ::[font-size] * 1.25;
-            ::[line-height] == [my-line-height];
-            width: == ::window[width]/2;
-        }
-
-        #instructions p {
-            ::[margin-top]  == [my-line-height];
-        }
-
-        #heading {
-            display: block;
-            ::[height] == ::[intrinsic-height];
-            ::[left] == #instructions[left];
-        }
-
-        #ingredients {
-            display: block;
-            ::[width] == #instructions[width] / 2;
-            ::[left] == [my-line-height] * 2;
-            text-align: right;
-        }
-
-        #heading[top] == 0;
-
-        #instructions {
-            display: block;
-            ::[top]  == #ingredients[top] == #heading[bottom];
-            ::[left] == #ingredients[right] + [my-line-height] * 2;
-            ::[width] == 400;
-        }
-
-
-    </script>
+  </style>
 </head>
-<body data-gss-id="1" style="box-sizing: border-box;">
 
-    <div id="recipe">
-        <div id="heading" data-gss-id="heading" style="box-sizing: border-box; position: absolute; margin: 0px; top: 0px; left: 0px; -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 280, 0, 0, 1);">
-            <h1 data-gss-id="2" style="box-sizing: border-box; font-size: 48px; line-height: 60px;">Pizza</h1>
-        </div>
+<body unresolved touch-action="auto">
+  <core-header-panel mode='cover'>
+  <core-toolbar>
+    <paper-tabs id="tabs" valueattr="name" selected="all" self-end>
+      <paper-tab name="all">ALL</paper-tab>
+      <paper-tab name="favorites">FAVORITES</paper-tab>
+    </paper-tabs>
+  </core-toolbar>
 
-        <div id="ingredients" data-gss-id="ingredients" style="box-sizing: border-box; position: absolute; margin: 0px; top: 0px; left: 0px; -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 40, 60, 0, 1); width: 200px;">
-            <h2 data-gss-id="3" style="box-sizing: border-box; font-size: 32px; line-height: 40px;">Ingredients</h2>
-            <h3 data-gss-id="5" style="box-sizing: border-box; font-size: 16px; line-height: 20px; margin-top: 20px;">Dough</h3>
-                <p data-gss-id="7" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">350g flour</p>
-                <p data-gss-id="8" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">25g dry yeast</p>
-                <p data-gss-id="9" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">1 teaspoon salt</p>
-                <p data-gss-id="10" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">2dl warm water</p>
-                <p data-gss-id="11" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">1/2dl oil</p>
-            <h3 data-gss-id="6" style="box-sizing: border-box; font-size: 16px; line-height: 20px; margin-top: 20px;">Fillings</h3>
-                <p data-gss-id="12" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">Tomato soup</p>
-                <p data-gss-id="13" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">Pineapple</p>
-                <p data-gss-id="14" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">Fried mince meat</p>
-                <p data-gss-id="15" style="box-sizing: border-box; font-size: 16px; line-height: 20px;">Cheese</p>
-        </div>
-        <div id="instructions" data-gss-id="instructions" style="box-sizing: border-box; position: absolute; margin: 0px; top: 0px; left: 0px; -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 280, 60, 0, 1); width: 400px;">
-            <h2 data-gss-id="4" style="box-sizing: border-box; font-size: 32px; line-height: 40px;">Instructions</h2>
-            <p data-gss-id="16" style="box-sizing: border-box; font-size: 16px; line-height: 20px; margin-top: 20px;">Mix flour, yeast, salt into a bowl. Mix oil and warm water, then add it to the bowl slowly, letting the water mix with the base. The base should become soft, uniform in texture blob that doesn't stick to hands when you knead it. Knead at the blob for 10 minutes, then put it into a bowl covered by cloth. Place the bowl into a warm place in the room. Wait a hour for the yeast to take effect.</p>
-            <p data-gss-id="17" style="box-sizing: border-box; font-size: 16px; line-height: 20px; margin-top: 20px;">After the yeast has inflated the base, knead it again for a while, press the air bubbles out from the dough. Divide the dough into pieces and stretch them few millimeters thick sheets. Put the dough above baking paper. Next add ingredients above the flattened dough. Tomato soup belongs to the bottom and the cheese belongs to the top, everything else between.</p>
-            <p data-gss-id="18" style="box-sizing: border-box; font-size: 16px; line-height: 20px; margin-top: 20px;">Before eating the pizza, bake it in 250°C at least for 15 minutes, remeber to remove the baking paper and wait until it will cool down enough.</p>
-        </div>
-    </div>
-
-
-<style id="gss-css-dump-1">*{margin:0;padding:0;}#heading{display:block;}#ingredients{display:block;text-align:right;}#instructions{display:block;}</style></body></html>
-
-
-<!-----
-layout: default
-title: Home
----
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
+  <div class="container" layout vertical center>
+    <post-card>
+      <img width="70" height="70" 
+        src="../images/avatar-07.svg">
+      <h2>Another Developer</h2>
+      <p>I'm composing with shadow DOM!</p>
+    </post-card>
   </div>
-  {% endfor %}
-</div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>-->
+  <!-- main page content will go here --> 
+
+</core-header-panel>
+</body>
+
+</html>
