@@ -6,7 +6,7 @@ pygments:         true
 permalink:        pretty
 
 # Setup
-title:            Battletalks
+title:            Battle talks
 tagline:          'A Jekyll theme'
 description:      'Battle rap discussions'
 url:              http://hyde.getpoole.com
