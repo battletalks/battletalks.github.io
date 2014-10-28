@@ -6,9 +6,9 @@ pygments:         true
 permalink:        pretty
 
 # Setup
-title:            Hjörtur Jónasson
+title:            Battletalks
 tagline:          'A Jekyll theme'
-description:      'A personal page made with <a href="http://jekyllrb.com" target="_blank">Jekyll</a>'
+description:      'Battle rap discussions'
 url:              http://hyde.getpoole.com
 
 author:
