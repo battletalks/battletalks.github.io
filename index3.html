@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://boxbase.org/gss-tests/pizza/ -->
+<html lang="en" class="gss-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Second version of the GSS Jekyll</title>
+
+    <script>
+      GSS_CONFIG = {
+        worker: "worker.js"
+      }
+    </script>
+    <script src="gss.js"></script>
+    <script type="text/gss">
+        
+        #nav-bar {
+            background-color: black;
+            color: white;
+            height: == ::window[height];
+            width: == ::window[width]/3;
+            position: fixed !important;
+        }
+
+        #nav-bar-content {
+            left: == #nav-bar[width]/10;
+            top: == #nav-bar[height]/10;
+            width: == .9*#nav-bar[width];
+        }
+
+        #content {
+            display: block;
+            height: == ::window[height];
+            ::[left] == #nav-bar[right];
+            width: == ::window[width] - #nav-bar[width];
+        }
+        
+
+    </script>
+</head>
+<body data-gss-id="1" style="box-sizing: border-box;">
+    <div id='nav-bar'>
+        <div id='nav-bar-content'>
+            <div id='nav-bar-about'>
+                <h1>Hjörtur Jónasson</h1>
+                <p>A personal page made with Jekyll</p>
+            </div>
+            <ul id='nav-bar-nav'>
+                <li><a href="index2.html">BACK</a></li>
+                <li><a href="index4.html">FORWARD</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id='content'></div>
+<style id="gss-css-dump-1">*{margin:0;padding:0;}#heading{display:block;}#ingredients{display:block;text-align:right;}#instructions{display:block;}</style></body></html>
+
