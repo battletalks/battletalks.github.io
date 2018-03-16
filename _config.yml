@@ -16,3 +16,5 @@ author:
   url:            https://twitter.com/mdo
 
 paginate:         5
+
+theme: jekyll-theme-cayman
